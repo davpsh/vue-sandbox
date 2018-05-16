@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Filter checkboxes</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="filter-checkboxes.js"></script>
+    </head>
+    <body>
+        <div id="sandbox">
+            <input type="text" v-model="search">
+            <ul id="fruits">
+                <li v-for="item in filteredItems" :key="item.key">
+                    <input type="checkbox" :value="item.key" :checked="item.checked" v-on:change="modify(item, $event)" /> {{ item.value }}
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
