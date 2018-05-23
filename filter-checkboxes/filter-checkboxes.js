@@ -21,17 +21,6 @@ window.addEventListener('load', function () {
           ? this.filterByValueMatch
           : this.items;
       }
-    },
-    methods: {
-      modify: function (item, event) {
-        var state = event.target.checked,
-            key = event.target.value,
-            index = item ? this.items.indexOf(item) : undefined;
-
-        if (item && !isNaN(index)) {
-          this.items[index].checked = state;
-        }
-      }
     }
   })
 })
